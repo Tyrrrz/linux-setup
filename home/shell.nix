@@ -78,13 +78,33 @@
     };
 
     "org/gnome/desktop/wm/keybindings" = {
+      activate-window-menu = [];
+      always-on-top = [];
+      begin-move = [];
+      begin-resize = [];
+      help = [];
+      move-to-monitor-down = [];
+      move-to-monitor-left = [];
+      move-to-monitor-right = [];
+      move-to-monitor-up = [];
+      move-to-workspace-left = [ "<Super>Left" ];
+      move-to-workspace-right = [ "<Super>Right" ];
+      move-to-workspace-last = [ "<Super>End" ];
+      panel-main-menu = [];
+      panel-run-dialog = [];
       switch-input-source = [];
       switch-input-source-backward = [];
       switch-windows = [ "<Alt>Tab" ];
+      switch-windows-backward = [];
     };
 
     "org/gnome/mutter" = {
       edge-tiling = false;
+    };
+
+    "org/gnome/mutter/keybindings" = {
+      toggle-tiled-left = [];
+      toggle-tiled-right = [];
     };
 
     "org/gnome/nautilus/list-view" = {
@@ -125,7 +145,7 @@
     };
 
     "org/gnome/shell/app-switcher" = {
-      current-workspace-only = false;
+      current-workspace-only = true;
     };
 
     "org/gnome/shell/extensions/tophat" = {
@@ -133,7 +153,7 @@
     };
 
     "org/gnome/shell/window-switcher" = {
-      current-workspace-only = false;
+      current-workspace-only = true;
     };
   };
 
