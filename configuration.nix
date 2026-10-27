@@ -17,7 +17,7 @@
 
       ./home/configuration.nix
 
-      ./custom.nix
+      ./extra.nix
     ];
 
   system = {
