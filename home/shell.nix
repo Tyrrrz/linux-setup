@@ -166,8 +166,8 @@
     };
 
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+      name = "Numix-Circle";
+      package = pkgs.numix-icon-theme-circle;
     };
 
     cursorTheme = {
