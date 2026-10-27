@@ -2,8 +2,10 @@
 
 {
   boot = {
-    loader.systemd-boot.enable = true;
-    loader.efi.canTouchEfiVariables = true;
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
 
     kernelPackages = pkgs.linuxPackages_latest;
     kernelModules = [ "kvm-amd" "kvm-intel" ];

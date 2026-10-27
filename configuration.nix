@@ -25,15 +25,15 @@
     copySystemConfiguration = true;
   };
 
-  services.fwupd.enable = true;
-
-  documentation.nixos.enable = false;
-
-  nixpkgs.config.allowUnfree = true;
-
   nix.gc = {
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 30d";
   };
+
+  nixpkgs.config.allowUnfree = true;
+
+  services.fwupd.enable = true;
+
+  documentation.nixos.enable = false;
 }
