@@ -56,6 +56,10 @@
       show-battery-percentage = true;
     };
 
+    "org/gnome/desktop/peripherals/mouse" = {
+      accel-profile = "flat";
+    };
+
     "org/gnome/desktop/peripherals/touchpad" = {
       disable-while-typing = false;
     };
