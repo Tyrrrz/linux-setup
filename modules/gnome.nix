@@ -69,7 +69,7 @@
           ])
           (lib.hm.gvariant.mkTuple [
             "xkb"
-            "ua+winkeys"
+            "ua+winkeysenhanced"
           ])
         ];
         xkb-options = [ "grp:alt_shift_toggle" ];
