@@ -13,7 +13,6 @@
       gh
       google-chrome
       libreoffice
-      vscode
     ];
   };
 }
