@@ -7,12 +7,12 @@
 
 {
   home-manager.users.${primaryUserName} = {
-    home.packages = with pkgs; [
-      gnomeExtensions.alphabetical-app-grid
-      gnomeExtensions.appindicator
-      gnomeExtensions.blur-my-shell
-      gnomeExtensions.gsconnect
-      gnomeExtensions.tophat
+    home.packages = with pkgs.gnomeExtensions; [
+      alphabetical-app-grid
+      appindicator
+      blur-my-shell
+      gsconnect
+      tophat
     ];
 
     dconf.settings = {
