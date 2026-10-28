@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  primaryUserName,
+  ...
+}:
 
 {
   virtualisation = {
@@ -22,12 +27,16 @@
     spiceUSBRedirection.enable = true;
   };
 
-  users.users.tyrrrz = {
-    extraGroups = [ "podman" "libvirtd" "kvm" ];
-  };
-
   environment.systemPackages = with pkgs; [
     dnsmasq
     phodav
   ];
+
+  users.users.${primaryUserName} = {
+    extraGroups = [
+      "podman"
+      "libvirtd"
+      "kvm"
+    ];
+  };
 }
