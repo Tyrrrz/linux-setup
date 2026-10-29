@@ -9,30 +9,9 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    # Let GNOME and GTK play sounds
-    libcanberra-gtk3
-    sound-theme-freedesktop
-  ];
-
   home-manager.users.${primaryUserName} = { config, lib, ... }: {
     gtk = {
       enable = true;
-
-      theme = {
-        name = "Adwaita-dark";
-        package = pkgs.gnome-themes-extra;
-      };
-
-      iconTheme = {
-        name = "Numix-Circle";
-        package = pkgs.numix-icon-theme-circle;
-      };
-
-      cursorTheme = {
-        name = "Bibata-Modern-Classic";
-        package = pkgs.bibata-cursors;
-      };
 
       gtk3 = {
         # Define custom sidebar bookmarks for Nautilus and file pickers
@@ -76,8 +55,6 @@
       };
 
       "org/gnome/desktop/interface" = {
-        accent-color = "purple";
-        color-scheme = "prefer-dark";
         enable-hot-corners = false;
         show-battery-percentage = true;
       };
@@ -98,7 +75,6 @@
       };
 
       "org/gnome/desktop/sound" = {
-        theme-name = "freedesktop";
         event-sounds = true;
         input-feedback-sounds = true;
       };
@@ -118,10 +94,10 @@
         move-to-workspace-last = [ "<Super>End" ];
         panel-main-menu = [ ];
         panel-run-dialog = [ ];
-        switch-input-source = [ ];
-        switch-input-source-backward = [ ];
         switch-applications = [ "<Super>Tab" ];
         switch-applications-backward = [ ];
+        switch-input-source = [ ];
+        switch-input-source-backward = [ ];
         switch-windows = [ "<Alt>Tab" ];
         switch-windows-backward = [ ];
       };
