@@ -9,11 +9,9 @@
   virtualisation = {
     containers.enable = true;
 
-    podman = {
+    docker = {
       enable = true;
       autoPrune.enable = true;
-      dockerCompat = true;
-      defaultNetwork.settings.dns_enabled = true;
     };
 
     libvirtd = {
@@ -27,14 +25,9 @@
     spiceUSBRedirection.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [
-    dnsmasq
-    phodav
-  ];
-
   users.users.${primaryUserName} = {
     extraGroups = [
-      "podman"
+      "docker"
       "libvirtd"
       "kvm"
     ];
