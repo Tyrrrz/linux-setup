@@ -9,7 +9,7 @@
   home-manager.users.${primaryUserName} = {
     home.packages = with pkgs; [
       fastfetch
-      fragments
+      transmission_4-gtk
       gh
       google-chrome
       libreoffice
