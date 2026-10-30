@@ -32,6 +32,8 @@
     };
   };
 
+  hardware.bluetooth.enable = true;
+
   users.users.${primaryUserName} = {
     extraGroups = [ "networkmanager" ];
   };
