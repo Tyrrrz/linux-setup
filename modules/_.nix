@@ -8,10 +8,12 @@
 
 let
   stateVersion = "26.05";
+
+  home-manager-pkg = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-${stateVersion}.tar.gz";
 in
 {
   imports = [
-    (import "${builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-${stateVersion}.tar.gz"}/nixos")
+    (import "${home-manager-pkg}/nixos")
   ];
 
   system = {
