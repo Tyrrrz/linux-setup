@@ -5,8 +5,8 @@ This is my current Linux setup, powered by NixOS.
 ## Usage
 
 - Clone or download this repository
-- Copy the contents to `/etc/nixos/shared` (or another directory)
-- Update the local `configuration.nix` file to import the corresponding host config
+- Copy the `profiles/` directory to `/etc/nixos/` (or use `copy.sh`)
+- Update the local `configuration.nix` file to import the corresponding profile
 
 Example:
 
@@ -16,10 +16,12 @@ Example:
 {
   imports = [
     ./hardware-configuration.nix
-    ./shared/hosts/nomad.nix
+
+    # Specify the desired profile
+    ./profiles/nomad.nix
   ];
 
-  # Any out-of-band configuration can also be defined here
+  # Any out-of-band configuration may also be defined here
   # ...
 }
 ```
