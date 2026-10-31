@@ -7,9 +7,12 @@
 
 {
   # Disable all bundled GNOME software
-  services.gnome.core-apps.enable = false;
-  services.gnome.core-developer-tools.enable = false;
-  services.gnome.games.enable = false;
+  services.gnome = {
+    core-apps.enable = false;
+    core-developer-tools.enable = false;
+    games.enable = false;
+  };
+
   environment.gnome.excludePackages = with pkgs; [
     gnome-tour
     gnome-user-docs
