@@ -1,8 +1,9 @@
 #!/usr/bin/env sh
 set -eu
 
-TARGET_DIR_PATH=/etc/nixos/profiles/
+TARGET_DIR_NAME=profiles
+NIX_CONFIG_DIR_PATH=/etc/nixos
 
-sudo rm -rf "$TARGET_DIR_PATH"
-sudo mkdir -p "$TARGET_DIR_PATH"
-sudo cp -r ./profiles/* "$TARGET_DIR_PATH"
+sudo rm -rf "$NIX_CONFIG_DIR_PATH/$TARGET_DIR_NAME"
+sudo mkdir -p "$NIX_CONFIG_DIR_PATH/$TARGET_DIR_NAME"
+sudo cp -r "./$TARGET_DIR_NAME/"* "$NIX_CONFIG_DIR_PATH/$TARGET_DIR_NAME"
