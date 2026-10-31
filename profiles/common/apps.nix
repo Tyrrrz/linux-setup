@@ -13,6 +13,7 @@
       gh
       google-chrome
       libreoffice
+      protonvpn-gui
     ];
   };
 }
