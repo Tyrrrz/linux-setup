@@ -10,7 +10,7 @@
     programs.bash = {
       enable = true;
 
-      # Enable the bell sound on bad inputs
+      # Enable the bell sound
       bashrcExtra = ''
         bind 'set bell-style audible'
       '';
@@ -23,7 +23,7 @@
       settings = {
         add_newline = false;
 
-        format = "$username$hostname$directory$character";
+        format = "$username$hostname$directory$git_branch$git_status$character";
 
         username = {
           style_user = "yellow";
@@ -35,7 +35,7 @@
         hostname = {
           style = "green";
           ssh_only = false;
-          format = "[@](cyan)[$hostname]($style) ";
+          format = "[@](white)[$hostname]($style) ";
         };
 
         directory = {
@@ -44,6 +44,26 @@
           truncation_symbol = "…/";
           style = "cyan";
           format = "[$path]($style) ";
+        };
+
+        git_branch = {
+          symbol = "⌥ ";
+          style = "purple";
+          format = "[$symbol$branch]($style) ";
+        };
+
+        git_status = {
+          conflicted = "=\$count";
+          ahead = "⇡\$count";
+          behind = "⇣\$count";
+          diverged = "⇕⇡\$ahead_behind";
+          untracked = "?\$count";
+          stashed = "*";
+          modified = "*";
+          staged = "[+\$count](green)";
+          renamed = "»\$count";
+          deleted = "✘\$count";
+          format = "([\\($all_status$ahead_behind\\)]($style) )";
         };
 
         character = {
