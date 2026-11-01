@@ -38,6 +38,13 @@
           "git.autoStash" = true;
           "git.confirmSync" = false;
           "git.enableSmartCommit" = true;
+          "github.copilot.enable" = {
+            "*" = true;
+            "plaintext" = true;
+            "markdown" = true;
+            "scminput" = true;
+          };
+          "github.copilot.nextEditSuggestions.enabled" = true;
           "terminal.integrated.smoothScrolling" = true;
           "terminal.integrated.fontLigatures.enabled" = true;
           "workbench.colorTheme" = "GitHub Dark";
