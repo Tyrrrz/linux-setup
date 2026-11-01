@@ -5,7 +5,7 @@ This is my current Linux setup, powered by NixOS.
 ## Usage
 
 - Clone or download this repository
-- Copy the `profiles/` directory to `/etc/nixos/` (or use `copy.sh`)
+- Copy the `profiles/` directory to `/etc/nixos/` (or run `copy.sh`)
 - Update the local `configuration.nix` file to import the corresponding profile
 
 Example:
@@ -25,3 +25,5 @@ Example:
   # ...
 }
 ```
+
+After that, activate the new configuration via `sudo nixos-rebuild switch`.
