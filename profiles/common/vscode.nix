@@ -20,6 +20,9 @@
         ];
 
         userSettings = {
+          "dev.containers.defaultExtensions" = [
+            "streetsidesoftware.code-spell-checker"
+          ];
           "diffEditor.ignoreTrimWhitespace" = false;
           "editor.cursorBlinking" = "smooth";
           "editor.cursorStyle" = "block";
