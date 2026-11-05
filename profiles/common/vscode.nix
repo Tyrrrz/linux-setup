@@ -17,6 +17,7 @@
           github.github-vscode-theme
           jnoortheen.nix-ide
           streetsidesoftware.code-spell-checker
+          vscode-icons-team.vscode-icons
         ];
 
         userSettings = {
@@ -48,7 +49,7 @@
           "terminal.integrated.smoothScrolling" = true;
           "terminal.integrated.fontLigatures.enabled" = true;
           "workbench.colorTheme" = "GitHub Dark";
-          "workbench.iconTheme" = "vs-minimal";
+          "workbench.iconTheme" = "vscode-icons";
           "workbench.editor.highlightModifiedTabs" = true;
           "workbench.list.smoothScrolling" = true;
           "workbench.startupEditor" = "none";
