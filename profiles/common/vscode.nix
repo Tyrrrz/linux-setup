@@ -54,6 +54,7 @@
           "workbench.list.smoothScrolling" = true;
           "workbench.startupEditor" = "none";
           "window.restoreWindows" = "none";
+          "vsicons.dontShowNewVersionMessage" = true;
         };
       };
     };
