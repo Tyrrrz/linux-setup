@@ -43,7 +43,7 @@
             "*" = true;
             "plaintext" = true;
             "markdown" = true;
-            "scminput" = true;
+            "scminput" = false;
           };
           "github.copilot.nextEditSuggestions.enabled" = true;
           "terminal.integrated.smoothScrolling" = true;
