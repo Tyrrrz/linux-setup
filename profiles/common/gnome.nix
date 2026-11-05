@@ -33,12 +33,6 @@
         folder-children = [ ];
       };
 
-      "org/gnome/desktop/background" = {
-        picture-options = "zoom";
-        picture-uri = "file://${./assets/wallpaper.jpg}";
-        picture-uri-dark = "file://${./assets/wallpaper.jpg}";
-      };
-
       "org/gnome/desktop/input-sources" = {
         per-window = true;
         sources = [

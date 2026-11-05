@@ -25,12 +25,18 @@
       };
 
       cursorTheme = {
-        name = "Bibata-Modern-Classic";
+        name = "Bibata-Modern-Ice";
         package = pkgs.bibata-cursors;
       };
     };
 
     dconf.settings = {
+      "org/gnome/desktop/background" = {
+        picture-options = "zoom";
+        picture-uri = "file://${./assets/wallpaper.jpg}";
+        picture-uri-dark = "file://${./assets/wallpaper.jpg}";
+      };
+
       "org/gnome/desktop/interface" = {
         accent-color = "purple";
         color-scheme = "prefer-dark";
