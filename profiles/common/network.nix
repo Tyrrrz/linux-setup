@@ -12,7 +12,9 @@
 
     networkmanager = {
       enable = true;
+
       insertNameservers = [
+        # https://one.one.one.one/dns
         "1.1.1.1"
         "1.0.0.1"
         "2606:4700:4700::1111"
@@ -23,19 +25,11 @@
     firewall = {
       enable = true;
 
-      allowedTCPPorts = [
-        80
-        443
-      ];
-
-      allowedUDPPortRanges = [
+      allowedTCPPortRanges = [
+        # KDE Connect
         {
-          from = 4000;
-          to = 4007;
-        }
-        {
-          from = 8000;
-          to = 8010;
+          from = 1714;
+          to = 1764;
         }
       ];
     };
