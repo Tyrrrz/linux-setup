@@ -13,6 +13,7 @@
       gh
       google-chrome
       libreoffice
+      opencode
       p7zip
       proton-vpn
       tree
