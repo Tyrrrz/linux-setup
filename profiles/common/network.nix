@@ -22,20 +22,16 @@
       ];
     };
 
-    firewall = {
-      enable = true;
-
-      allowedTCPPortRanges = [
-        # KDE Connect
-        {
-          from = 1714;
-          to = 1764;
-        }
-      ];
-    };
+    firewall.enable = true;
   };
 
   hardware.bluetooth.enable = true;
+
+  programs.kdeconnect = {
+    enable = true;
+    # Open the corresponding ports without installing the package
+    package = null;
+  };
 
   users.users.${primaryUserName} = {
     extraGroups = [ "networkmanager" ];
