@@ -97,7 +97,7 @@
       };
 
       "org/gnome/mutter" = {
-        edge-tiling = false;
+        edge-tiling = true;
       };
 
       "org/gnome/mutter/keybindings" = {
