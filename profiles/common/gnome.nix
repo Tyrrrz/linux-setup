@@ -96,6 +96,10 @@
         switch-windows-backward = [ ];
       };
 
+      "org/gnome/desktop/wm/preferences" = {
+        button-layout = ":minimize,maximize,close";
+      };
+
       "org/gnome/mutter" = {
         edge-tiling = true;
       };
