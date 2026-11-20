@@ -11,6 +11,7 @@ in
     ./common/_core.nix
     ./common/audio.nix
     ./common/bash.nix
+    ./common/bluetooth.nix
     ./common/boot.nix
     ./common/firmware.nix
     ./common/gaming.nix
