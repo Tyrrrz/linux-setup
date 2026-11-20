@@ -19,8 +19,8 @@ in
     ./common/locale.nix
     ./common/network.nix
     ./common/nix.nix
-    ./common/packages.nix
     ./common/power.nix
+    ./common/software.nix
     ./common/users.nix
     ./common/virtualization.nix
     ./common/vscode.nix
