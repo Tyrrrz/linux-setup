@@ -15,10 +15,7 @@ in
     ./common/firmware.nix
     ./common/gaming.nix
     ./common/git.nix
-    ./common/gnome-extensions.nix
-    ./common/gnome-software.nix
-    ./common/gnome-theme.nix
-    ./common/gnome.nix
+    ./common/gnome
     ./common/locale.nix
     ./common/network.nix
     ./common/nix.nix
