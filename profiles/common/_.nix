@@ -1,10 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  primaryUserName,
-  ...
-}:
+{ primaryUserName, ... }:
 
 let
   stateVersion = "26.05";

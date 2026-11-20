@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  primaryUserName,
-  ...
-}:
+{ pkgs, primaryUserName, ... }:
 
 {
   # Disable all bundled GNOME software

@@ -1,23 +1,32 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}:
+{ ... }:
 
 let
   hostName = "nomad";
   primaryUserName = "tyrrrz";
-
-  # In the future, when I add other profiles, I might replace this with
-  # manual imports so that each profile would have a somewhat different
-  # collection of modules. But for now, this is good enough.
-  modules = lib.pipe ./common [
-    lib.filesystem.listFilesRecursive
-    (lib.filter (lib.hasSuffix ".nix"))
-  ];
 in
 {
   _module.args = { inherit hostName primaryUserName; };
-  imports = modules;
+
+  imports = [
+    ./common/_.nix
+    ./common/audio.nix
+    ./common/bash.nix
+    ./common/boot.nix
+    ./common/firmware.nix
+    ./common/gaming.nix
+    ./common/git.nix
+    ./common/gnome-extensions.nix
+    ./common/gnome-software.nix
+    ./common/gnome-theme.nix
+    ./common/gnome.nix
+    ./common/locale.nix
+    ./common/network.nix
+    ./common/nix.nix
+    ./common/packages.nix
+    ./common/power.nix
+    ./common/users.nix
+    ./common/virtualization.nix
+    ./common/vscode.nix
+    ./common/yubikey.nix
+  ];
 }

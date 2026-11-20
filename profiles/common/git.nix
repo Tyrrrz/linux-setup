@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  primaryUserName,
-  ...
-}:
+{ primaryUserName, ... }:
 
 {
   home-manager.users.${primaryUserName} = {
