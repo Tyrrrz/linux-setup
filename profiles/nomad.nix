@@ -8,7 +8,7 @@ in
   _module.args = { inherit hostName primaryUserName; };
 
   imports = [
-    ./common/_.nix
+    ./common/_core.nix
     ./common/audio.nix
     ./common/bash.nix
     ./common/boot.nix
