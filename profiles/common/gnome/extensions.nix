@@ -10,6 +10,13 @@ let
   ];
 in
 {
+  # Enable KDE Connect integration so that GSConnect can work
+  programs.kdeconnect = {
+    enable = true;
+    # The package will be installed at user level (GSConnect)
+    package = null;
+  };
+
   home-manager.users.${primaryUserName} = {
     home.packages = extensions;
 
